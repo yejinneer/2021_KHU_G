@@ -1,0 +1,31 @@
+
+<html>
+
+<head>
+    <title>Project Testing</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+</head>
+
+<body>
+    <div class="content container">
+        <header class="page-header" sytle="overflow: auto;">
+            <h1 style="display: inline;">URL List</h1>
+            {% if user.is_authenticated %}
+                <p style="float: right;"><span style = " font-size:1.5em; color: rgb(173, 212, 66);">Welcome, {{ user.username }}<small>(<a href="{% url 'user_logout' %}">Logout</a>)</small>&nbsp;&nbsp;</span></p>
+            {% else %}
+                <div style="float: right;">
+                    <a class="btn btn-default" href="signup">Sign up</a>
+                    <a class="btn btn-default" href="login">Login</a>
+                </div>
+            {% endif %}
+        </header>
+        <a href="https://www.google.co.kr/"><h3>1. Google</h3></a>
+        <a href="https://www.youtube.com/"><h3>2. Youtube</h3></a>
+        <a href="https://www.naver.com/"><h3>3. Naver</h3></a>
+        <a class="btn btn-default" href="google">Button Google</a>
+    </div>
+    
+</body>
+
+</html>
